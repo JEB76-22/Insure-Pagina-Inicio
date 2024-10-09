@@ -203,8 +203,11 @@
     justify-content: center;
     align-items: center;
   }
-  .footer__icon:hover{
-    background-color: var(--Dark-Violet);
+  .footer__icon {
+    transition: filter 0.3s ease;
+  }
+  .footer__icon:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(19%) saturate(1960%) hue-rotate(234deg) brightness(94%) contrast(88%);
   }
   .footer__navigation{
     display: flex;
