@@ -69,6 +69,7 @@
     background-position: center;
     background-size: cover;
   }
+  
   .hero__texts{
     width: 90%;
     margin: 0 auto;
@@ -288,6 +289,7 @@
       width: 90%;
       display: flex;
       justify-content: space-between;
+      position: relative;
     }
 
     .hero__main::before{/*antes, que los textos*/
@@ -295,6 +297,20 @@
       height: 530px;
       background-image: url(/images/image-intro-desktop.jpg);
       order: 1;
+    }
+    .hero__main::after {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -50px;
+      width: 30%;
+      height: 80%;
+      background-image: url(/images/bg-pattern-intro-right-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: contain;
+      z-index: 1;
+      pointer-events: none;
     }
     .hero__texts{
       width: 49%;
@@ -405,4 +421,6 @@
       text-align: center;
     }
 
-}
+
+
+  }
