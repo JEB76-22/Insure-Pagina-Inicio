@@ -6,8 +6,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/stilos.css".css>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="app.js" defer></script>
   <title> Insure, Pagina Inicio</title>
 </head>
 <body>
@@ -20,7 +22,8 @@
           <img src="/images/logo.svg" alt="logo-insure" class="nav__logo">
         </figure>
 
-        <div class="nav__links">
+        <div class="nav__links   " id="links">
+          <button class="nav__close" id="cerrar"><i class="bi bi-x-lg"></i></button>
           <a href="#" class="nav__link">How we wor</a>
           <a href="#" class="nav__link">Blog</a>
           <a href="#" class="nav__link">Account</a>
@@ -28,8 +31,10 @@
         </div>
 
         <figure class="nav__hamburguer">
-          <img src="/images/icon-hamburger.svg" alt="icon-hamburger" class="nav__icon">
+          <button class="menu" id="abrir"><img src="/images/icon-hamburger.svg" alt="icon-hamburger" class="nav__icon"></button>
+          
         </figure>
+
       </div>
     </nav>
 
@@ -49,7 +54,6 @@
   </header>
 
   <main class="main">
-
     <section class="different container">
       <h2 class="title title--different">We’re different</h2>
 
@@ -156,7 +160,7 @@
     
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Javi-Coder</a>.
+      Coded by <a href="https://github.com/JEB76-22?tab=overview&from=2024-10-01&to=2024-10-02" target="_blank">Javi-Coder</a>.
     </div>
   </footer>
   

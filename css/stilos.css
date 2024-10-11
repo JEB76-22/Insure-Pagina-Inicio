@@ -39,9 +39,53 @@
     align-items: center;
     justify-content: space-between;
   }
+  
   .nav__links{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--Dark-Violet);
+    padding: 1.5rem;
+    
   }
+  .nav__link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .nav__link:hover{
+    text-decoration: overline;
+  }
+  .nav__links.visible{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav__close{
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    &.nav__close:hover{
+      font-size: 1.1rem;
+    }
+  }
+  .menu{
+    border: none;
+    cursor: pointer;
+    &.menu:hover{
+      border: .1px solid gray;
+    }
+  }
+
   .nav__link--cta{
     transition: 2s;
   }
@@ -248,17 +292,20 @@
     text-decoration:underline ;
   }
   @media (min-width:768px) {
-
+    .nav__close, .menu{
+      display: none;
+    }
     .nav__links{
-      display: flex;
+      opacity: 1;
+      visibility: visible;
+      background-color: #fff;
+      flex-direction: row;
       gap: 2em;
+
     }
     .nav__link{
-      text-decoration: none;
       color: var(--Dark-Grayish-Violet);
-      text-transform: uppercase;
-      font-weight: 700;
-      padding: .8em 0;
+      text-transform: uppercase;      
     }
     .nav__link--cta{
       color: var(--Dark-Violet);
@@ -423,4 +470,44 @@
 
 
 
+  }
+  @media (min-width: 768px) {
+    .nav__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav__links {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      padding: 0;
+      flex-direction: row;
+      gap: 20px;
+      transform: translateX(0);
+    }
+
+    .nav__link {
+      color: var(--Dark-Grayish-Violet);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .nav__link--cta {
+      border: 2px solid var(--Very-Dark-Violet);
+      padding: 10px 20px;
+    }
+    
+    .nav__link--cta:hover {
+      background-color: var(--Very-Dark-Violet);
+      color: var(--Very-Light-Gray);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav__close,
+    .nav__hamburguer {
+      display: none;
+    }
   }
