@@ -292,30 +292,47 @@
     text-decoration:underline ;
   }
   @media (min-width:768px) {
-    .nav__close, .menu{
-      display: none;
+
+    .nav__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .nav__links{
+
+    .nav__links {
       opacity: 1;
       visibility: visible;
-      background-color: #fff;
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      padding: 0;
       flex-direction: row;
-      gap: 2em;
-
+      gap: 20px;
+      transform: translateX(0);
     }
-    .nav__link{
+
+    .nav__link {
       color: var(--Dark-Grayish-Violet);
-      text-transform: uppercase;      
-    }
-    .nav__link--cta{
-      color: var(--Dark-Violet);
-      border: 1px solid ;
-      padding: .8em 2em;
+      text-transform: uppercase;  
+      font-weight: 700;    
     }
 
-    .nav__hamburguer{
+    .nav__link--cta {
+      border: 2px solid var(--Very-Dark-Violet);
+      padding: 10px 20px;
+      transition: background-color 2s, color 2s;
+    }
+
+    .nav__link--cta:hover {
+      background-color: var(--Very-Dark-Violet);
+      color: var(--Very-Light-Gray);
+    }
+
+    .nav__close, .nav__hamburguer{
       display: none;
     }
+
     .hero{
       background-image: linear-gradient(to bottom, var(--Dark-Violet) 75%, #fff 75%);
       position: relative;
@@ -468,46 +485,8 @@
       text-align: center;
     }
 
-
-
   }
-  @media (min-width: 768px) {
-    .nav__container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
 
-    .nav__links {
-      position: static;
-      width: auto;
-      height: auto;
-      background-color: transparent;
-      padding: 0;
-      flex-direction: row;
-      gap: 20px;
-      transform: translateX(0);
-    }
 
-    .nav__link {
-      color: var(--Dark-Grayish-Violet);
-      text-transform: uppercase;
-      font-weight: 700;
-    }
 
-    .nav__link--cta {
-      border: 2px solid var(--Very-Dark-Violet);
-      padding: 10px 20px;
-    }
-    
-    .nav__link--cta:hover {
-      background-color: var(--Very-Dark-Violet);
-      color: var(--Very-Light-Gray);
-      transition: background-color 0.3s, color 0.3s;
-    }
 
-    .nav__close,
-    .nav__hamburguer {
-      display: none;
-    }
-  }
